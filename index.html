@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Burst</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <!-- custom raw css  -->
+    <link rel="stylesheet" href="styles/styles.css">
 
     <!-- tailwind css and daisyUi  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
@@ -18,6 +20,7 @@
                 extend: {
                     colors: {
                         clifford: '#da373d',
+                        'nav-background': '#F85559',
                     }
                 }
             }
@@ -33,7 +36,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
-    
+
     <style>
         .font-lato {
             font-family: 'Lato', sans-serif;
@@ -42,6 +45,67 @@
 </head>
 
 <body>
+
+    <header class="container mx-auto border-red-500 border-2 px-10 rounded-full bg-nav-background">
+        <div class="navbar flex-row-reverse md:flex-row justify-between bg-base-100 bg-nav-background ">
+            <div class="navbar-start w-auto">
+
+                <!--menu hidden in sm device & lg:block  -->
+                <div class="hidden lg:block">
+                    <ul class="flex justify-around gap-3 font-medium text-white">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">All Fruits</a></li>
+                    </ul>
+                </div>
+                <!--menu lg:hidden navbar  -->
+                <div class="dropdown lg:hidden">
+                    <label tabindex="0" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </label>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium ">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">All Fruits</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- icon and brand name  -->
+            <div class="navbar-center text-white">
+                <div class="flex gap-3 justify-between items-center text-4xl font-bold">
+                    <img class="w-[45px] h-[45px]" src="./images/logo.png" alt="">
+                    <h2>Fruit Burst</h2>
+                </div>
+            </div>
+            <!-- search field  -->
+            <div class="navbar-end hidden lg:block w-1/4">
+                <div class="form-control flex flex-row">
+                    <div>
+                        <input type="text" placeholder="Search here ... " 
+                        class="search-icon search-icon-size input input-bordered w-24 md:w-auto rounded-full font-medium " />
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
 
 </body>
 
